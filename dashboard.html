@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f4f6f9;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: #111;
+  color: white;
+  position: fixed;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+}
+
+.main {
+  margin-left: 270px;
+  padding: 20px;
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  background: white;
+  border-radius: 10px;
+}
+</style>
+
+<script>
+function loadPage(url) {
+  document.getElementById("viewer").src = url;
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h2>Dashboard</h2>
+
+  <strong>Forms</strong>
+  <a href="#" onclick="loadPage('FORM_LINK_1')">New Client</a>
+  <a href="#" onclick="loadPage('FORM_LINK_2')">New Contract</a>
+  <a href="#" onclick="loadPage('FORM_LINK_3')">New Quotation</a>
+  <a href="#" onclick="loadPage('FORM_LINK_4')">Add Payment</a>
+
+  <br>
+
+  <strong>Reports</strong>
+  <a href="#" onclick="loadPage('SHEET_LINK_1')">Clients Sheet</a>
+  <a href="#" onclick="loadPage('SHEET_LINK_2')">Contracts Sheet</a>
+  <a href="#" onclick="loadPage('SHEET_LINK_3')">Quotations Sheet</a>
+  <a href="#" onclick="loadPage('SHEET_LINK_4')">Payments Sheet</a>
+
+</div>
+
+<div class="main">
+  <iframe id="viewer"></iframe>
+</div>
+
+</body>
+</html>
